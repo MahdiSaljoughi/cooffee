@@ -3,7 +3,7 @@ import Link from "next/link";
 import Prisma from "@/lib/prisma";
 import { EditUser } from "@/components/Edit/EditUser";
 
-export default async function AdminProducst() {
+export default async function AdminProduct() {
   const products = await Prisma.product.findMany();
   return (
     <>
@@ -44,7 +44,7 @@ export default async function AdminProducst() {
                     {product.title}
                   </Link>
                 </td>
-                <td>کاربر شماره {product.createBy}</td>
+                <td>کاربر شماره {product.created_by}</td>
                 <td>{product.slug}</td>
                 <td>{product.count}</td>
                 <td>{product.cat}</td>
