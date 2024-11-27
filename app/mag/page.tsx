@@ -1,8 +1,9 @@
 import prismadb from "@/lib/prisma";
 import Link from "next/link";
+import posts from "@/data/post.json";
 
 export default async function page() {
-  const posts = await prismadb.post.findMany();
+  // const posts = await prismadb.post.findMany();
 
   return (
     <>

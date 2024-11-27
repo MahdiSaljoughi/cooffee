@@ -148,8 +148,8 @@ export default function MainFooter() {
                 </div>
               </div>
               <p>
-                تمام حقوق این رابط کاربری متعلق به{" "}
-                <span className="text-orange-200">اسم سایت</span> میباشد و اجازه
+                تمام حقوق این رابط کاربری متعلق به
+                <span className="text-orange-200"> کافی</span> میباشد و اجازه
                 استفاده آن را در مصارف شخصی و تجاری ندارید.
               </p>
             </div>

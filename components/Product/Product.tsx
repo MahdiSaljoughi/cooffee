@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Product({ product }: any) {
   return (
     <div className="rounded-xl block bg-white dark:bg-zinc-800 hover:shadow-lg transition-colors font-[fontd1]">
-      <Link href={`/products/${product.slug}`}>
+      <Link href={`/products/${product.id}`}>
         <img
           src={product.image}
           alt={product.title}

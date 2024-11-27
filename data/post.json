@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "title": "مقاله یک",
+    "description": "",
+    "image": "/images/blogs/blog-1.png"
+  },
+  {
+    "id": 1,
+    "title": "مقاله دو",
+    "description": "",
+    "image": "/images/blogs/blog-2.png"
+  },
+  {
+    "id": 2,
+    "title": "مقاله سه",
+    "description": "",
+    "image": "/images/blogs/blog-3.png"
+  },
+  {
+    "id": 3,
+    "title": "مقاله چهار",
+    "description": "",
+    "image": "/images/blogs/blog-4.png"
+  }
+]

@@ -1,23 +1,14 @@
-import Prisma from "@/lib/prisma";
 import AddToCart from "@/components/AddToCart/AddToCart";
-import CounterProduct from "@/components/CounterProduct/CounterProduct";
+import productData from "@/data/product.json";
+export default function Page({ params }: { params: { id: number } }) {
+  const product = productData.find((x) => x.id == params.id);
 
-export default async function ProductPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const product = await Prisma.product.findFirst({
-    where: {
-      slug: params.slug,
-    },
-  });
-
-  // product not found
   if (!product) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
-        <span className="block text-3xl text-red-400">کالا یافت نشد!</span>
+      <div className="h-screen">
+        <span className="flex items-center justify-center fixed inset-0 text-3xl text-red-400">
+          کالا یافت نشد!
+        </span>
       </div>
     );
   } else {
@@ -56,7 +47,7 @@ export default async function ProductPage({
               </div>
             </div>
             <div className="w-full lg:w-96 lg:h-36 bg-white border dark:border-zinc-700 dark:bg-zinc-800 lg:rounded-2xl py-4 px-2 md:p-4 fixed bottom-0 inset-x-0 lg:sticky lg:top-20">
-              {product.count > 0 ? (
+              {product?.count > 0 ? (
                 <div className="flex flex-row-reverse md:flex-col gap-3 items-center justify-between">
                   <div className="flex items-center gap-x-1">
                     <span className="text-lg md:text-xl">
@@ -65,7 +56,6 @@ export default async function ProductPage({
                     <span className="text-zinc-400 font-[fontd3]">تومان</span>
                   </div>
                   <span>{`موجودی : ${product.count}`}</span>
-                  {/* <CounterProduct /> */}
                   <AddToCart product={product} />
                 </div>
               ) : (

@@ -27,6 +27,6 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/api/product/route.ts"
-, "contexts/cart.js", "app/products/[slug]/page.tsx", "app/cart/page.tsx", "components/Admin/Header.tsx"  ],
+, "contexts/cart.js", "app/products/[id]/page.tsx", "app/cart/page.tsx", "components/Admin/Header.tsx"  ],
   "exclude": ["node_modules"]
 }

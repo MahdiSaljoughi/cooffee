@@ -1,25 +1,26 @@
 import Link from "next/link";
 import Product from "@/components/Product/Product";
-import { IPost } from "@/types/interfaces";
+import productData from "@/data/product.json";
+import posts from "@/data/post.json";
 
 export default async function Home() {
-  const responseProduct = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/product`,
-    {
-      cache: "no-store",
-    }
-  );
-  const dataProduct = await responseProduct.json();
-  const products = dataProduct.products;
+  // const responseProduct = await fetch(
+  //   `${process.env.NEXT_PUBLIC_BASE_URL}/api/product`,
+  //   {
+  //     cache: "no-store",
+  //   }
+  // );
+  // const dataProduct = await responseProduct.json();
+  // const products = dataProduct.products;
 
-  const responsePost = await fetch(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/post`,
-    {
-      cache: "no-store",
-    }
-  );
-  const dataPost = await responsePost.json();
-  const posts = dataPost.posts;
+  // const responsePost = await fetch(
+  //   `${process.env.NEXT_PUBLIC_BASE_URL}/api/post`,
+  //   {
+  //     cache: "no-store",
+  //   }
+  // );
+  // const dataPost = await responsePost.json();
+  // const posts = dataPost.posts;
 
   return (
     <>
@@ -70,7 +71,7 @@ export default async function Home() {
               </Link>
             </div>
             <div className="grid grid-cols-1 xs:grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xs:gap-3 sm:gap-6 md:gap-10">
-              {products.map((product: any, index: any) => (
+              {productData.map((product: any, index: any) => (
                 <div key={index} className="w-full">
                   <Product product={product} />
                 </div>
@@ -227,7 +228,7 @@ export default async function Home() {
             </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-6 md:gap-10">
-            {posts.map((post: IPost, index: number) => (
+            {posts.map((post: any, index: number) => (
               <>
                 <div
                   key={index}

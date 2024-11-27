@@ -18,7 +18,7 @@ export interface IProduct {
   description: string;
   cat: string;
   image: string;
-  created_by: string;
-  created_at: any;
-  updated_at: any;
+  created_by?: string;
+  created_at?: any;
+  updated_at?: any;
 }

@@ -22,7 +22,7 @@ export default function SignIn() {
           password: "",
         }}
         validationSchema={Yup.object({
-          phone: Yup.string().required("ایمل الزامی است ."),
+          phone: Yup.string().required("شماره الزامی است ."),
           password: Yup.string().required("رمز عبور الزامی است ."),
         })}
         onSubmit={async (values, { setSubmitting }) => {
@@ -33,7 +33,7 @@ export default function SignIn() {
             redirect: false,
           });
           if (signInData?.error) {
-            // console.log(signInData.error);
+            console.log(signInData.error);
             toast("خطا ! لطفا مقادیر را به درستی وارد کنید .");
           } else {
             setSubmitting(false);
@@ -47,7 +47,7 @@ export default function SignIn() {
         }}
       >
         <Form className="w-full md:w-80 mx-auto py-10 flex flex-col gap-y-5">
-          <label htmlFor="phone">phone</label>
+          <label htmlFor="phone">شماره موبایل</label>
           <Field
             name="phone"
             type="text"

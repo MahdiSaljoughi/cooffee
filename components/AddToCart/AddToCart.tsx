@@ -1,7 +1,6 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-
 import { useContext } from "react";
 import { CartContext } from "@/contexts/cart";
 
@@ -17,7 +16,7 @@ export default function AddToCart({ product }: any) {
     }
 
     const existingItem = state.cart.cartItems.find(
-      (item: any) => item.slug === product.slug
+      (item: any) => item.id == product.id
     );
 
     const qty = existingItem ? existingItem.qty + 1 : 1;

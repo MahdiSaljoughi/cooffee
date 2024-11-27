@@ -101,7 +101,7 @@ export default function MainHeader() {
                         height={30}
                       />
                       <span className="text-orange-300 text-sm font-[fontm1]">
-                        اسم سایت
+                        کافی
                       </span>
                     </div>
                     <div className="flex items-center justify-center gap-x-4">
@@ -172,7 +172,7 @@ export default function MainHeader() {
             >
               <Image src="/logo.svg" alt="logo" width={35} height={35} />
               <span className="text-orange-300 md:ml-5 font-[fontm1]">
-                اسم سایت
+                کافی
               </span>
             </Link>
             <ul className="hidden md:flex items-center justify-center gap-x-4">
